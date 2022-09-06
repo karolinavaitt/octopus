@@ -1,0 +1,194 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-evenly;
+}
+
+.menu__list {
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+@media screen and (max-width: 639px) {
+  .menu__list {
+    position: absolute;
+    top: 72px;
+    right: -2%;
+    background-color: white;
+    width: 100vw;
+  }
+}
+
+.menu__item:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #867c4b;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.menu__item:hover:after {
+  transform: scaleX(1);
+}
+
+.menu__link {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  margin: 0 15px;
+}
+
+.active-btn {
+  color: #867c4b;
+}
+
+.logo {
+  position: relative;
+}
+
+.logo__img {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  max-height: 120px;
+}
+@media screen and (max-width: 639px) {
+  .logo__img {
+    margin: 10px;
+  }
+}
+
+.bgimg1,
+.bgimg2 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg1 {
+  background-image: url(./../images/19_OLB9771-Edit.jpg);
+  min-height: 100%;
+}
+
+.bgimg2 {
+  background-image: url(./../images/30_OLB9954-Edit-Edit.jpg);
+  min-height: 500px;
+}
+
+.bg-light {
+  color: rgb(0, 0, 0);
+  background-color: rgba(189, 177, 114, 0.9725490196);
+  text-align: center;
+  padding: 50px 80px;
+}
+
+h3,
+p {
+  text-align: center;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  background-color: #fff;
+  color: black;
+  height: 40px;
+}
+
+.button {
+  color: rgb(24, 24, 23);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  padding-left: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.button:hover {
+  color: #867c4b;
+}
+
+.video__width {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.video__wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video__wrapper iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-area1 {
+  background-image: url(./../images/parallaxa.jpg);
+}
+
+p {
+  line-height: 2;
+  max-width: 1100px;
+  margin: 5px auto;
+  text-align: justify;
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */

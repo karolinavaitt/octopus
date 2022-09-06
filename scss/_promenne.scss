@@ -1,0 +1,28 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+$textcolor: #575555;
+$secondarycolor: #867c4b;
+$menucolor: 000000;
+$spacer: 15px;
+$fontsize: 14px;
+$textfont: "Montserrat", sans-serif;

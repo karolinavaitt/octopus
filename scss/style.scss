@@ -1,0 +1,93 @@
+@use "promenne";
+@use "header";
+
+.bgimg1,
+.bgimg2 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg1 {
+  background-image: url(./../images/19_OLB9771-Edit.jpg);
+  min-height: 100%;
+}
+.bgimg2 {
+  background-image: url(./../images/30_OLB9954-Edit-Edit.jpg);
+  min-height: 500px;
+}
+
+.bg-light {
+  color: rgb(0, 0, 0);
+  background-color: #bdb172f8;
+  text-align: center;
+  padding: 50px 80px;
+}
+
+h3,
+p {
+  text-align: center;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  background-color: #fff;
+  color: black;
+  height: 40px;
+}
+
+.button {
+  color: rgb(24, 24, 23);
+  font-family: promenne.$textfont;
+  font-weight: 600;
+  text-decoration: none;
+  padding-left: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: promenne.$secondarycolor;
+  }
+}
+
+.video__width {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.video__wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.video__wrapper iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-area1 {
+  background-image: url(./../images/parallaxa.jpg);
+}
+
+p {
+  line-height: 2;
+  max-width: 1100px;
+  margin: 5px auto;
+  text-align: justify;
+  font-size: 14px;
+}
