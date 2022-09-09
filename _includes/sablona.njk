@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hlavička -->
+
+    <header class="header">
+      <div class="logo">
+        <a href="#"
+          ><img class="logo__img" src="/images/logo1.png" alt="Octopus"
+        /></a>
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link active-btn" href="/">Domů</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/onas/">O nás</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Koncerty</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Hudba</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Foto</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Programy</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/kontakt/">Kontakt</a>
+          </li>
+        </ul>
+        <a href="https://www.facebook.com/octopusvocalis/" target=" _blank"
+          ><img class="logo__soc" src="/images/001-facebook.png" alt="Octopus"
+        /></a>
+        <a
+          href="https://www.youtube.com/channel/UC4Zn72qlfGYcK1cUdeUIOfg/"
+          target=" _blank"
+          ><img class="logo__soc" src="/images/002-youtube.png" alt="Octopus"
+        /></a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+		{{ content | safe }}
+
+	</main>
+
+     <footer class="footer">
+      © 2022 Octopus Vocalis | All Rights Reserved.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

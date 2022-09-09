@@ -28,12 +28,16 @@ body {
   left: 0;
   background: white;
   width: 100%;
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
   height: 60px;
+}
+
+.menu__item {
+  padding: 10px;
 }
 
 .menu {
@@ -47,6 +51,7 @@ body {
   list-style: none;
   display: flex;
   position: relative;
+  margin-right: 20px;
 }
 @media screen and (max-width: 639px) {
   .menu__list {
@@ -58,18 +63,6 @@ body {
   }
 }
 
-.menu__item:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #867c4b;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
-}
-
-.menu__item:hover:after {
-  transform: scaleX(1);
-}
-
 .menu__link {
   font-size: 16px;
   font-weight: 500;
@@ -78,7 +71,20 @@ body {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
-  margin: 0 15px;
+}
+.menu__link:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #867c4b;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+.menu__link:hover:after {
+  transform: scaleX(1);
+}
+
+.menu__link:active {
+  background-color: rgba(189, 177, 114, 0.9725490196);
 }
 
 .active-btn {
@@ -99,6 +105,173 @@ body {
   .logo__img {
     margin: 10px;
   }
+}
+
+.logo__soc {
+  height: 30px;
+  padding-right: 20px;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(254, 254, 254);
+  color: black;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.about__content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about__people {
+  padding-top: 150px;
+}
+
+.about__box {
+  margin-top: 140px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(189, 176, 114, 0.7960784314);
+}
+
+.text {
+  line-height: 1.5;
+  text-align: justify;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.about {
+  background-image: url(./../images/11_OLB9655-Edit.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about__title {
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.about__link {
+  text-decoration: none;
+  color: #867c4b;
+  font-size: 14px;
+  font-weight: 500;
+}
+.about__link:hover {
+  color: black;
+}
+
+.person {
+  display: flex;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.person__img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.person__foto {
+  flex: 1;
+  height: 100%;
+  padding: 10px;
+  justify-self: center;
+}
+
+.people {
+  min-height: calc(100vh - 120px);
+  background-color: rgba(189, 177, 114, 0.9725490196);
+  padding: 30px 10px;
+}
+
+.person__box {
+  flex: 1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.person__box p {
+  text-align: left;
+  line-height: 1.5;
+  padding-bottom: 15px;
+}
+
+.person__title {
+  color: #867c4b;
+  padding-bottom: 20px;
+}
+.person__title span {
+  color: black;
+  text-transform: lowercase;
+}
+
+.arrow {
+  font-size: large;
+  text-align: center;
+  line-height: 1;
+}
+
+.arrow__link {
+  color: #867c4b;
+  font-weight: 600;
+  position: absolute;
+  text-decoration: none;
+  padding-left: 0;
+}
+.arrow__link:hover {
+  color: black;
+}
+.arrow__link p {
+  font-size: 12px;
+}
+
+.link__left {
+  bottom: -5px;
+}
+
+.link__right {
+  right: 25px;
+  bottom: -5px;
+}
+
+.kontakt {
+  min-height: calc(100vh - 120px);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(./../images/38_OLB0037-Edit.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.kontakt__box {
+  background-color: rgba(189, 176, 114, 0.8980392157);
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 50px 0;
+}
+.kontakt__box p {
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 500;
+}
+.kontakt__box p a {
+  text-decoration: none;
+  color: black;
+}
+.kontakt__box p a:hover {
+  color: #867c4b;
 }
 
 .bgimg1,
@@ -132,18 +305,16 @@ p {
   text-align: center;
 }
 
+p {
+  font-size: 14px;
+}
+
 .caption {
   position: absolute;
   left: 0;
   top: 50%;
   width: 100%;
   text-align: center;
-}
-
-.footer {
-  background-color: #fff;
-  color: black;
-  height: 40px;
 }
 
 .button {
@@ -160,7 +331,7 @@ p {
 }
 
 .video__width {
-  max-width: 700px;
+  max-width: 800px;
   margin: 50px auto;
   padding: 0 20px;
 }
@@ -185,10 +356,22 @@ p {
   background-image: url(./../images/parallaxa.jpg);
 }
 
-p {
+.text__main {
   line-height: 2;
   max-width: 1100px;
   margin: 5px auto;
   text-align: justify;
   font-size: 14px;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+  letter-spacing: 7px;
+  text-shadow: 2px 3px 11px rgba(0, 0, 0, 0.88);
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,78 @@
+@use "promenne";
+
+.person {
+  display: flex;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  background-color: white;
+}
+.person__img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.person__foto {
+  flex: 1;
+  height: 100%;
+  padding: 10px;
+  justify-self: center;
+}
+
+.people {
+  min-height: calc(100vh - 120px);
+  background-color: #bdb172f8;
+  padding: 30px 10px;
+}
+
+.person__box {
+  flex: 1;
+  padding: 20px;
+  margin-top: 20px;
+}
+.person__box p {
+  text-align: left;
+  line-height: 1.5;
+  padding-bottom: 15px;
+}
+
+.person__title {
+  color: promenne.$secondarycolor;
+  padding-bottom: 20px;
+  span {
+    color: black;
+    text-transform: lowercase;
+  }
+}
+
+.arrow {
+  font-size: large;
+  text-align: center;
+  line-height: 1;
+}
+
+.arrow__link {
+  color: promenne.$secondarycolor;
+  font-weight: 600;
+  position: absolute;
+  text-decoration: none;
+  padding-left: 0;
+
+  &:hover {
+    color: black;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+.link__left {
+  bottom: -5px;
+}
+
+.link__right {
+  right: 25px;
+  bottom: -5px;
+}

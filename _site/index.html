@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="/css/style.css" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -28,10 +24,10 @@
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link active-btn" href="#">Domů</a>
+            <a class="menu__link active-btn" href="/">Domů</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">O nás</a>
+            <a class="menu__link" href="/onas/">O nás</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Koncerty</a>
@@ -46,21 +42,29 @@
             <a class="menu__link" href="#">Programy</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Kontakt</a>
+            <a class="menu__link" href="/kontakt/">Kontakt</a>
           </li>
         </ul>
+        <a href="https://www.facebook.com/octopusvocalis/" target=" _blank"
+          ><img class="logo__soc" src="/images/001-facebook.png" alt="Octopus"
+        /></a>
+        <a
+          href="https://www.youtube.com/channel/UC4Zn72qlfGYcK1cUdeUIOfg/"
+          target=" _blank"
+          ><img class="logo__soc" src="/images/002-youtube.png" alt="Octopus"
+        /></a>
       </nav>
     </header>
 
     <div class="bgimg1">
       <div class="caption">
-        <span class="border">Vokální oktet</span>
+        <h2>Vokální oktet</h2>
       </div>
     </div>
 
     <div class="bg-light">
       <h3>O nás</h3>
-      <p>
+      <p class="text__main">
         Vokální oktet OctOpus Vocalis byl založen v roce 2013, většina jeho
         členů se však zpěvu věnuje společně již od dětských let, kdy se setkali
         v brněnském dětském sboru Kantiléna. Od té doby spolupracovali na mnoha
@@ -85,11 +89,7 @@
       </div>
     </div>
 
-    <div class="bgimg2">
-      <div class="caption">
-        <span class="border">Vokální oktet</span>
-      </div>
-    </div>
+    <div class="bgimg2"></div>
     <div style="position: relative">
       <div class="bg-light">
         <h3 class="light-text">Programy</h3>
@@ -100,7 +100,9 @@
       </div>
     </div>
 
-    <footer class="center footer">octopus</footer>
+    <footer class="footer">
+      © 2022 Octopus Vocalis | All Rights Reserved.
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

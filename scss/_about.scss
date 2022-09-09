@@ -1,0 +1,48 @@
+@use "promenne";
+
+.about__content {
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: promenne.$spacer;
+}
+
+.about__people {
+  padding-top: 150px;
+}
+
+.about__box {
+  margin-top: 140px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #bdb072cb;
+}
+.text {
+  line-height: 1.5;
+  text-align: justify;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+.about {
+  background-image: url(./../images/11_OLB9655-Edit.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about__title {
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.about__link {
+  text-decoration: none;
+  color: promenne.$secondarycolor;
+  font-size: 14px;
+  font-weight: 500;
+
+  &:hover {
+    color: black;
+  }
+}
