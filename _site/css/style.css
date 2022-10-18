@@ -36,8 +36,37 @@ body {
   height: 60px;
 }
 
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu__toggler {
+  cursor: pointer;
+  font-size: large;
+  border: solid 2px black;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+@media screen and (min-width: 980px) {
+  .menu__toggler {
+    display: none;
+  }
+}
+
 .menu__item {
   padding: 10px;
+  text-align: center;
+}
+@media screen and (max-width: 979px) {
+  .menu__item:hover {
+    background-color: rgba(189, 177, 114, 0.9725490196);
+  }
+}
+@media screen and (max-width: 350px) {
+  .menu__item {
+    border-bottom: solid 1px #867c4b;
+  }
 }
 
 .menu {
@@ -53,16 +82,32 @@ body {
   position: relative;
   margin-right: 20px;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 979px) {
   .menu__list {
+    display: none;
     position: absolute;
-    top: 72px;
+    top: 65px;
     right: -2%;
     background-color: white;
-    width: 100vw;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .menu__list {
+    width: 350px;
+    top: 60px;
+    right: -40px;
+    z-index: 500;
+    padding-top: 20px;
+    height: 100vh;
   }
 }
 
+@media screen and (max-width: 979px) {
+  .menu__checkbox:checked ~ .menu__list {
+    display: block;
+  }
+}
 .menu__link {
   font-size: 16px;
   font-weight: 500;
@@ -72,15 +117,22 @@ body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
 }
-.menu__link:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #867c4b;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
+@media screen and (min-width: 980px) {
+  .menu__link:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #867c4b;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+  }
+  .menu__link:hover:after {
+    transform: scaleX(1);
+  }
 }
-.menu__link:hover:after {
-  transform: scaleX(1);
+@media screen and (max-width: 979px) {
+  .menu__link {
+    font-size: 14px;
+  }
 }
 
 .menu__link:active {
@@ -93,6 +145,7 @@ body {
 
 .logo {
   position: relative;
+  z-index: 600;
 }
 
 .logo__img {
@@ -101,15 +154,20 @@ body {
   left: 20px;
   max-height: 120px;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 1000px) {
   .logo__img {
-    margin: 10px;
+    max-height: 80px;
   }
 }
 
 .logo__soc {
   height: 30px;
   padding-right: 20px;
+}
+@media screen and (max-width: 350px) {
+  .logo__soc {
+    height: 20px;
+  }
 }
 
 .footer {
@@ -118,6 +176,11 @@ body {
   color: black;
   padding: 20px 0;
   font-size: 14px;
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    font-size: 12px;
+  }
 }
 
 .about__content {
@@ -131,7 +194,7 @@ body {
 }
 
 .about__box {
-  margin-top: 140px;
+  margin-top: 120px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: rgba(189, 176, 114, 0.7960784314);
@@ -142,6 +205,11 @@ body {
   text-align: justify;
   padding-bottom: 20px;
   font-size: 14px;
+}
+@media screen and (max-width: 980px) {
+  .text {
+    font-size: 12px;
+  }
 }
 
 .about {
@@ -163,17 +231,26 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (max-width: 980px) {
+  .about__link {
+    font-size: 12px;
+  }
+}
 .about__link:hover {
   color: black;
 }
 
 .person {
-  display: flex;
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  justify-content: space-evenly;
   background-color: white;
+}
+@media screen and (min-width: 640px) {
+  .person {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 .person__img {
@@ -187,6 +264,7 @@ body {
   height: 100%;
   padding: 10px;
   justify-self: center;
+  align-self: center;
 }
 
 .people {
@@ -199,6 +277,11 @@ body {
   flex: 1;
   padding: 20px;
   margin-top: 20px;
+}
+@media screen and (max-width: 920px) {
+  .person__box {
+    padding-bottom: 40px;
+  }
 }
 
 .person__box p {
@@ -247,8 +330,7 @@ body {
 
 .kontakt {
   min-height: calc(100vh - 120px);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 20px;
   background-image: url(./../images/38_OLB0037-Edit.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -259,12 +341,17 @@ body {
   background-color: rgba(189, 176, 114, 0.8980392157);
   max-width: 600px;
   margin: 50px auto;
-  padding: 50px 0;
+  padding: 50px;
 }
 .kontakt__box p {
   line-height: 1.5;
   font-size: 16px;
   font-weight: 500;
+}
+@media screen and (max-width: 640px) {
+  .kontakt__box p {
+    font-size: 14px;
+  }
 }
 .kontakt__box p a {
   text-decoration: none;
@@ -308,8 +395,7 @@ body {
   display: grid;
   margin: 0 auto;
   padding: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 @media screen and (min-width: 940px) {
@@ -325,13 +411,15 @@ body {
   object-fit: cover;
 }
 
-@media screen and (min-width: 940px) {
-  .foto4 {
-    grid-row: 1/3;
-    grid-column: 1/2;
-  }
+.foto4 {
+  grid-row: 1/3;
+  grid-column: 1/2;
 }
 
+.foto8 {
+  grid-row: 7/9;
+  grid-column: 2/3;
+}
 @media screen and (min-width: 940px) {
   .foto8 {
     grid-row: 3/5;
@@ -340,34 +428,89 @@ body {
 }
 
 .foto__title {
-  padding: 50px;
-  font-size: 30px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.video__box {
+  margin: 0 auto;
+  padding: 20px;
+}
+@media screen and (min-width: 640px) {
+  .video__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1100px;
+  }
+}
+
+.video {
+  padding: 20px;
 }
 
 .bgimg1,
 .bgimg2 {
   position: relative;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bgimg1 {
-  background-image: url(./../images/19_OLB9771-Edit.jpg);
-  min-height: 100%;
+  display: none;
+}
+@media screen and (min-width: 980px) {
+  .bgimg1 {
+    display: block;
+    background-image: url(./../images/19_OLB9771-Edit.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+  }
 }
 
 .bgimg2 {
-  background-image: url(./../images/30_OLB9954-Edit-Edit.jpg);
-  min-height: 500px;
+  display: none;
+}
+@media screen and (min-width: 980px) {
+  .bgimg2 {
+    display: block;
+    background-image: url(./../images/30_OLB9954-Edit-Edit.jpg);
+    width: 100%;
+    min-height: 500px;
+    background-attachment: fixed;
+  }
+}
+
+.stripe {
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  max-height: 500px;
+}
+@media screen and (min-width: 980px) {
+  .stripe {
+    display: none;
+  }
+}
+
+.stripe .stripe__foto {
+  flex: 1;
+  height: 100%;
+}
+
+.stripe__foto {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .bg-light {
   color: rgb(0, 0, 0);
   background-color: rgba(189, 177, 114, 0.9725490196);
   text-align: center;
-  padding: 50px 80px;
+  padding: 40px 10px;
 }
 
 h3,
@@ -377,6 +520,11 @@ p {
 
 p {
   font-size: 14px;
+}
+@media screen and (max-width: 980px) {
+  p {
+    font-size: 12px;
+  }
 }
 
 .caption {
@@ -404,6 +552,11 @@ p {
   max-width: 800px;
   margin: 50px auto;
   padding: 0 20px;
+}
+@media screen and (max-width: 640px) {
+  .video__width {
+    margin-bottom: 0px;
+  }
 }
 
 .video__wrapper {
@@ -433,15 +586,32 @@ p {
   text-align: justify;
   font-size: 14px;
 }
+@media screen and (max-width: 640px) {
+  .text__main {
+    font-size: 12px;
+  }
+}
 
-h2,
 h3 {
   text-transform: uppercase;
 }
 
 h2 {
   color: white;
-  font-size: 40px;
-  letter-spacing: 7px;
+  font-size: 80px;
+  letter-spacing: 5px;
   text-shadow: 2px 3px 11px rgba(0, 0, 0, 0.88);
+  font-family: "Tangerine", cursive;
+}
+
+.box__uvod {
+  margin: 40px auto;
+}
+
+.box__uvod h4 {
+  margin: 10px;
+}
+
+.box__uvod p {
+  line-height: 1.5;
 }/*# sourceMappingURL=style.css.map */

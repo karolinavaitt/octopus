@@ -12,16 +12,20 @@
 }
 
 .about__box {
-  margin-top: 140px;
+  margin-top: 120px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: #bdb072cb;
 }
+
 .text {
   line-height: 1.5;
   text-align: justify;
   padding-bottom: 20px;
   font-size: 14px;
+  @media screen and (max-width: 980px) {
+    font-size: 12px;
+  }
 }
 .about {
   background-image: url(./../images/11_OLB9655-Edit.jpg);
@@ -41,6 +45,9 @@
   color: promenne.$secondarycolor;
   font-size: 14px;
   font-weight: 500;
+  @media screen and (max-width: 980px) {
+    font-size: 12px;
+  }
 
   &:hover {
     color: black;

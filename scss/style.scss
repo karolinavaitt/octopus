@@ -6,30 +6,63 @@
 @use "kontakt";
 @use "program";
 @use "foto";
+@use "hudba";
 
 .bgimg1,
 .bgimg2 {
   position: relative;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bgimg1 {
-  background-image: url(./../images/19_OLB9771-Edit.jpg);
-  min-height: 100%;
+  display: none;
+  @media screen and (min-width: 980px) {
+    display: block;
+    background-image: url(./../images/19_OLB9771-Edit.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+  }
 }
+
 .bgimg2 {
-  background-image: url(./../images/30_OLB9954-Edit-Edit.jpg);
-  min-height: 500px;
+  display: none;
+
+  @media screen and (min-width: 980px) {
+    display: block;
+    background-image: url(./../images/30_OLB9954-Edit-Edit.jpg);
+    width: 100%;
+    min-height: 500px;
+    background-attachment: fixed;
+  }
+}
+
+.stripe {
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  max-height: 500px;
+  @media screen and (min-width: 980px) {
+    display: none;
+  }
+}
+.stripe .stripe__foto {
+  flex: 1;
+  height: 100%;
+}
+.stripe__foto {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .bg-light {
   color: rgb(0, 0, 0);
   background-color: #bdb172f8;
   text-align: center;
-  padding: 50px 80px;
+  padding: 40px 10px;
 }
 
 h3,
@@ -39,6 +72,9 @@ p {
 
 p {
   font-size: 14px;
+  @media screen and (max-width: 980px) {
+    font-size: 12px;
+  }
 }
 .caption {
   position: absolute;
@@ -66,6 +102,9 @@ p {
   max-width: 800px;
   margin: 50px auto;
   padding: 0 20px;
+  @media screen and (max-width: 640px) {
+    margin-bottom: 0px;
+  }
 }
 
 .video__wrapper {
@@ -93,16 +132,31 @@ p {
   margin: 5px auto;
   text-align: justify;
   font-size: 14px;
+  @media screen and (max-width: 640px) {
+    font-size: 12px;
+  }
 }
 
-h2,
 h3 {
   text-transform: uppercase;
 }
 
 h2 {
   color: white;
-  font-size: 40px;
-  letter-spacing: 7px;
+  font-size: 80px;
+  letter-spacing: 5px;
   text-shadow: 2px 3px 11px rgba(0, 0, 0, 0.88);
+  font-family: "Tangerine", cursive;
+}
+
+.box__uvod {
+  margin: 40px auto;
+}
+
+.box__uvod h4 {
+  margin: 10px;
+}
+
+.box__uvod p {
+  line-height: 1.5;
 }

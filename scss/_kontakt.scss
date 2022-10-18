@@ -3,8 +3,7 @@
 .kontakt {
   min-height: calc(100vh - 120px);
 
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 20px;
   background-image: url(./../images/38_OLB0037-Edit.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -15,11 +14,14 @@
   background-color: #bdb072e5;
   max-width: 600px;
   margin: 50px auto;
-  padding: 50px 0;
+  padding: 50px;
   p {
     line-height: 1.5;
     font-size: 16px;
     font-weight: 500;
+    @media screen and (max-width: 640px) {
+      font-size: 14px;
+    }
   }
   p a {
     text-decoration: none;

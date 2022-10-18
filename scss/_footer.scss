@@ -6,4 +6,7 @@
   color: black;
   padding: 20px 0;
   font-size: 14px;
+  @media screen and (max-width: 640px) {
+    font-size: 12px;
+  }
 }

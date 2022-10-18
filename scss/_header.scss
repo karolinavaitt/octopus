@@ -13,8 +13,32 @@
   height: 60px;
 }
 
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.menu__toggler {
+  cursor: pointer;
+  font-size: large;
+  border: solid 2px black;
+  padding: 5px 10px;
+  margin-right: 20px;
+
+  @media screen and (min-width: 980px) {
+    display: none;
+  }
+}
 .menu__item {
   padding: 10px;
+  text-align: center;
+  @media screen and (max-width: 979px) {
+    &:hover {
+      background-color: #bdb172f8;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    border-bottom: solid 1px promenne.$secondarycolor;
+  }
 }
 
 .menu {
@@ -29,12 +53,27 @@
   position: relative;
   margin-right: 20px;
 
-  @media screen and (max-width: 639px) {
+  @media screen and (max-width: 979px) {
+    display: none;
     position: absolute;
-    top: 72px;
+    top: 65px;
     right: -2%;
     background-color: white;
-    width: 100vw;
+    width: 120px;
+  }
+  @media screen and (max-width: 350px) {
+    width: 350px;
+    top: 60px;
+    right: -40px;
+    z-index: 500;
+    padding-top: 20px;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .menu__checkbox:checked ~ .menu__list {
+    display: block;
   }
 }
 
@@ -46,15 +85,21 @@
   text-transform: uppercase;
   font-family: promenne.$textfont;
   letter-spacing: 1px;
-  &:after {
-    display: block;
-    content: "";
-    border-bottom: solid 3px promenne.$secondarycolor;
-    transform: scaleX(0);
-    transition: transform 300ms ease-in-out;
+
+  @media screen and (min-width: 980px) {
+    &:after {
+      display: block;
+      content: "";
+      border-bottom: solid 3px promenne.$secondarycolor;
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+    }
   }
-  &:hover:after {
-    transform: scaleX(1);
+  @media screen and (max-width: 979px) {
+    font-size: 14px;
   }
 }
 
@@ -66,6 +111,7 @@
 }
 .logo {
   position: relative;
+  z-index: 600;
 }
 .logo__img {
   position: absolute;
@@ -73,12 +119,15 @@
   left: 20px;
   max-height: 120px;
 
-  @media screen and (max-width: 639px) {
-    margin: 10px;
+  @media screen and (max-width: 1000px) {
+    max-height: 80px;
   }
 }
 
 .logo__soc {
   height: 30px;
   padding-right: 20px;
+  @media screen and (max-width: 350px) {
+    height: 20px;
+  }
 }
